@@ -2,28 +2,19 @@
 <?eclipse version="3.4"?>
 <plugin>
 
-   <extension
-         point="org.eclipse.ui.commands">
-      <category
-            name="Sample Category"
-            id="nuaa.commands.category">
-      </category>
-      <command
-            name="Sample Command"
-            categoryId="nuaa.commands.category"
-            id="nuaa.commands.sampleCommand">
-      </command>
-   </extension>
-   
+  
    <extension
          point="org.eclipse.ui.handlers">
       <handler
             commandId="nuaa.commands.sampleCommand"
-            class="nuaa.handlers.MySample">
+            class="nuaa.handlers.SampleHandler">
       </handler>    
+      
+      <handler
+            commandId="My Name"
+            class="nuaa.handlers.MySample">
+      </handler>
    </extension>
-   
-   
     
    <extension
          point="org.eclipse.ui.menus">
@@ -38,6 +29,11 @@
                   mnemonic="S"
                   id="nuaa.menus.sampleCommand">
             </command>
+            <command
+                  commandId="My Name"
+                  id="nuaa.menus.myCommand">
+            </command>
+            
          </menu>
       </menuContribution> 
    </extension>

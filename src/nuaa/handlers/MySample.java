@@ -8,12 +8,13 @@ import org.eclipse.ui.IWorkbenchWindow;
 import org.eclipse.ui.handlers.HandlerUtil;
 
 public class MySample extends AbstractHandler{
+	@Override
 	public Object execute(ExecutionEvent event) throws ExecutionException{
 		IWorkbenchWindow window = HandlerUtil.getActiveWorkbenchWindow(event);
 		MessageDialog.openInformation(
 				window.getShell(),
 				"litao",
-				"This is my first try");
+				"Hello litao\nYou are great!");
 		return null;
 	}
 }
